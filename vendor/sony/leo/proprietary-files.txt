@@ -1,0 +1,5 @@
+system/lib/libqcamera2.so
+system/lib/libcamera_metadata.so
+system/lib/libaudio.so
+system/vendor/lib/libqcom_ui.so
+system/vendor/lib/libgps.so
