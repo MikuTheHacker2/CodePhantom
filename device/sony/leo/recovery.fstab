@@ -1,0 +1,5 @@
+/boot emmc /boot defaults
+/system emmc /system defaults
+/vendor emmc /vendor defaults
+/data emmc /data defaults
+/cache emmc /cache defaults
