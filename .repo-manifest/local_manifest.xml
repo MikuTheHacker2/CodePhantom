@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding"UTF-8"?>
+<manifest>
+  <project name="CodePhantom/device_sony_leo"
+    path="device/sony/leo"
+    remote="github"
+    revision="main" />
+  <project name="CodePhantom/packages_apps_CodePhantomShell"
+    path="packages/apps/CodePhantomShell"
+    remote="github"
+    revision="main" />
+  <project name="CodePhantom/vendor_sony_leo"
+    path="vendor/sony/leo"
+    remote="github"
+    revision="main" />
+</manifest>
