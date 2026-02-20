@@ -1,11 +1,34 @@
+# BoardConfig.mk - CodePhantom OS - Xperia Z3 (leo)
+
+# Plataforma
+TARGET_BOARD_PLATFORM := msm8974
+TARGET_BOOTLOADER_BOARD_NAME := leo
+
+# Arquitectura
 TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a
+TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
 
+# Kernel
+TARGET_KERNEL_SOURCE := kernel/sony/msm8974
+TARGET_KERNEL_CONFIG := leo_defconfig
+
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=leo
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE := 2048
+
+# Particiones (ejemplo aproximado Z3)
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648
-BOARD_VENDORIMAGE_PARTITION_SIZE := 671088640
+BOARD_VENDORIMAGE_PARTITION_SIZE := 536870912
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 12884901888
 
-BOARD_USERDEBUG_PROPERTIES += \
-ro.secure=0 \
-ro.debuggable=1 \
-persist.sys.usb.config=adb
+# Sistema root
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+
+# SELinux
+BOARD_SEPOLICY_DIRS += device/sony/leo/sepolicy
+
+# Permitir build userdebug con root
+TARGET_BUILD_VARIANT := userdebug
